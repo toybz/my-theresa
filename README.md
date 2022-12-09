@@ -4,6 +4,8 @@
 This is a challenge for `MyTheresa`. It has been built from scratch,
 with WebPack 5 (the packer), Babel (the transpiler), React and SCSS.
 
+> ###### Note: Live Demo is running on [https://toybz.github.io/my-theresa/](https://toybz.github.io/my-theresa/)
+
 
 ### 🖥 Install and run
 
@@ -18,7 +20,7 @@ $ npm i
 $ npm start
 ```
 
-Then open [http://localhost:8080](http://localhost:3000) in your browser.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 ### 🧪 Tests
 
 To run the unit tests, you have to run the following command:
