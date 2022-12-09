@@ -1,0 +1,26 @@
+@import "components/favorite-movie-card/styles";
+
+.favorite-movies {
+  padding: 2rem 0;
+
+  &-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+    @include media(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .no-movies-selected {
+    color: $title-color;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+  }
+}

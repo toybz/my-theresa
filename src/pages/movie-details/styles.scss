@@ -1,0 +1,79 @@
+@import "components/movie-card/styles";
+
+.movie-details {
+  padding: 2rem 0;
+
+  &.comedy {
+    --title-font-family: "Comedy", serif;
+    --button-background: #{$comedy-color};
+  }
+
+  &.science-fiction {
+    --title-font-family: "Science-Fiction", fantasy;
+    --button-background: #{$science-fiction-color};
+  }
+
+  &.western {
+    --title-font-family: "Western", monospace;
+    --button-background: #{$western-color};
+  }
+
+  .banner {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    animation: gradient 15s ease-in-out infinite;
+    font-size: 2rem;
+    letter-spacing: .8rem;
+    margin-top: 1rem;
+
+    @include media(sm) {
+      font-size: 4rem;
+    }
+
+    &.comedy {
+      font-family: var(--title-font-family);
+      background: url(https://i.pinimg.com/originals/10/d4/f1/10d4f132f732dc041837360dc5f5688d.jpg) center center / 110%;
+      font-size: 5rem;
+      letter-spacing: 1.5rem;
+      padding-top: 2px;
+    }
+
+    &.science-fiction {
+      font-family: var(--title-font-family);
+      background: url(https://cdn.wallpapersafari.com/88/62/waPISH.jpeg) center center / 110%;
+    }
+
+    &.western {
+      font-family: var(--title-font-family);
+      background: url(https://i2.wp.com/wallpapertag.com/wallpaper/full/4/d/e/902609-top-old-west-background-1984x1142.jpg) center center / 110%;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+
+  .button-go-back {
+    display: inline-flex;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--button-background);
+    padding: .5rem 1rem;
+    border-radius: .375rem;
+    margin-top: 2rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, serif;
+    font-weight: 700;
+    font-size: .65rem;
+  }
+}

@@ -1,0 +1,327 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url(/my-theresa/fb6f3c230cb846e25247.gif) center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url(/my-theresa/a4e97f5a2a64f0ab1323.eot);
+    src: url(/my-theresa/a4e97f5a2a64f0ab1323.eot?#iefix) format('embedded-opentype'), url(/my-theresa/295183786cd8a1389865.woff) format('woff'), url(/my-theresa/c94f7671dcc99dce43e2.ttf) format('truetype'), url(/my-theresa/2630a3e3eab21c607e21.svg#slick) format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+
+.card{padding:1rem;border-radius:1rem;background-color:#222;box-shadow:10px 10px 20px #1b1b1b,-10px -10px 20px #1b1b1b}.swiper-container{width:100%}.swiper-slide{background-position:center;background-size:cover;width:300px;height:300px}.swiper-slide img{display:block;width:100%}.slick-next{right:10px;z-index:1}.slick-prev{left:10px;z-index:1}.header-navbar{width:100%;height:60px;background-color:#ffe785}.header-navbar nav img{max-width:120px}@media (min-width: 1200px){.header-navbar nav img{max-width:150px}}.header-navbar nav .icon{position:relative}.header-navbar nav .icon svg{height:25px;width:25px}.header-navbar nav .icon-badge{background-color:tomato;color:white;position:absolute;top:-8px;right:-8px;min-height:18px;min-width:18px;border-radius:50%}.header-navbar nav .icon-badge div{margin-top:4px}.movies-carousel-section{margin-top:1rem}.movies-carousel-section:last-child{margin-bottom:3rem}.movies-carousel-section .movie-section{color:gray;text-transform:uppercase;font-size:24px}.movie-description{position:relative}.movie-description-container{font-size:16px;position:absolute;top:0;left:0;width:100%;height:30px;color:white;background-color:rgba(0,0,0,0.7)}.movie-description-container .title-container{width:100%;padding:0 15px}.movie-description-container .title-container div:last-child{color:#ffe785}.movie-description-container .title-container div:last-child div:last-child{margin-top:2px}.swiper-slide-active .movie-description{cursor:pointer}.movie-card{margin-top:2rem;display:grid;grid-template-columns:1fr;gap:2rem}@media (min-width: 576px){.movie-card{grid-template-columns:max-content 1fr}}.movie-card img{border-radius:10px;margin:auto}@media (min-width: 576px){.movie-card img{margin:unset}}.movie-card .description{color:white}.movie-card .description .stars{color:#ffe785}.movie-card .description .title{font-family:var(--title-font-family);font-size:2rem}@media (min-width: 576px){.movie-card .description .title{font-size:3rem}}.movie-card .description .overview{font-size:1.3rem;font-style:italic}.movie-card .description .button-add-to-favorites{justify-content:start;background-color:transparent;border:1px solid var(--button-background);box-shadow:0 0 20px var(--button-background);cursor:pointer;text-transform:uppercase;padding:.5rem 1rem;font-weight:700;border-radius:.375rem;margin-top:2rem;color:white;min-width:200px}.movie-card .description .button-add-to-favorites.clicked{box-shadow:unset}.movie-card .description .button-add-to-favorites span{font-size:.8rem;margin-left:4px}.movie-card .description .button-add-to-favorites:hover{filter:brightness(0.9)}.movie-card .description .skeleton{margin-top:10px}.movie-details{padding:2rem 0}.movie-details.comedy{--title-font-family: "Comedy", serif;--button-background: #b8917a}.movie-details.science-fiction{--title-font-family: "Science-Fiction", fantasy;--button-background: #4bacfd}.movie-details.western{--title-font-family: "Western", monospace;--button-background: #f89804}.movie-details .banner{text-transform:uppercase;text-align:center;color:white;animation:gradient 15s ease-in-out infinite;font-size:2rem;letter-spacing:.8rem;margin-top:1rem}@media (min-width: 576px){.movie-details .banner{font-size:4rem}}.movie-details .banner.comedy{font-family:var(--title-font-family);background:url(https://i.pinimg.com/originals/10/d4/f1/10d4f132f732dc041837360dc5f5688d.jpg) center center/110%;font-size:5rem;letter-spacing:1.5rem;padding-top:2px}.movie-details .banner.science-fiction{font-family:var(--title-font-family);background:url(https://cdn.wallpapersafari.com/88/62/waPISH.jpeg) center center/110%}.movie-details .banner.western{font-family:var(--title-font-family);background:url(https://i2.wp.com/wallpapertag.com/wallpaper/full/4/d/e/902609-top-old-west-background-1984x1142.jpg) center center/110%}@keyframes gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.movie-details .button-go-back{display:inline-flex;text-decoration:none;background-color:transparent;border:1px solid var(--button-background);padding:.5rem 1rem;border-radius:.375rem;margin-top:2rem;color:white;text-transform:uppercase;font-family:Arial, serif;font-weight:700;font-size:.65rem}.favorite-movie-card{margin-top:4rem;display:flex;flex-direction:column}.favorite-movie-card img{width:8rem;height:8rem;margin-top:-5rem;margin-left:auto;margin-right:auto;display:flex;border-radius:50%}.favorite-movie-card .description{margin-top:1rem;text-align:center;color:white}.favorite-movie-card .description .stars{color:#ffe785}.favorite-movie-card .description .stars sup{margin-left:.25rem}.favorite-movie-card .description .title{font-family:var(--title-font-family);font-size:1.8rem;margin-top:.5rem}@media (min-width: 576px){.favorite-movie-card .description .title{font-size:2rem}}.favorite-movie-card .description .button-remove-from-favorites{cursor:pointer;height:40px;color:white;text-transform:uppercase;padding:.5rem 1rem;font-weight:700;border-radius:.375rem;background-color:transparent;border:1px solid tomato;box-shadow:0 0 10px tomato;margin:2rem auto 1rem auto}.favorite-movie-card .description .button-remove-from-favorites span{font-size:.8rem}.favorite-movie-card .description .button-remove-from-favorites:hover{filter:brightness(0.9)}.favorite-movies{padding:2rem 0}.favorite-movies-grid{display:grid;gap:2rem;grid-template-columns:1fr}@media (min-width: 576px){.favorite-movies-grid{grid-template-columns:repeat(2, 1fr)}}@media (min-width: 1200px){.favorite-movies-grid{grid-template-columns:repeat(3, 1fr)}}.favorite-movies .no-movies-selected{color:gray;text-transform:uppercase;font-size:24px;text-align:center}@font-face{font-family:'Comedy';src:url(/my-theresa/10be4d5a6ba5d695348a.ttf) format("truetype");font-weight:600;font-style:normal}@font-face{font-family:'Science-Fiction';src:url(/my-theresa/e4b413a4f6281946fa9f.ttf) format("truetype");font-weight:600;font-style:normal}@font-face{font-family:'Western';src:url(/my-theresa/113f593e41ba044e5230.ttf) format("truetype");font-weight:600;font-style:normal}body{margin:0;background-color:#222}.items-center,.header-navbar nav,.movie-description-container,.movie-description-container .title-container,.movie-card .description .button-add-to-favorites,.favorite-movie-card .description .button-remove-from-favorites,.middle-align,.header-navbar,.header-navbar nav .icon-badge,.movie-description-container .title-container div:last-child{display:flex;align-items:center}.justify-center,.middle-align,.header-navbar,.header-navbar nav .icon-badge,.movie-description-container .title-container div:last-child{display:flex;justify-content:center}.space-between,.header-navbar nav,.movie-description-container .title-container{display:flex;justify-content:space-between}.app-container,.header-navbar nav{width:100%;padding:0 30px}@media (min-width: 960px){.app-container,.header-navbar nav{max-width:960px}}@media (min-width: 1200px){.app-container,.header-navbar nav{max-width:1200px}}
+
